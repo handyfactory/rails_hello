@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     # 루트페이지, 모든 게시물 보여준다
+    @posts = Post.all
   end
 
   def new
@@ -20,5 +21,7 @@ class PostsController < ApplicationController
 
   def show
     # 게시물 보여주는 곳
+    postId = params[:id]
+    @post = Post.find(postId)
   end
 end

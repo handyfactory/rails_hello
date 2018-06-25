@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#100번 돌면서 포스트를 만든다
+
+100.times do
+    Post.create(
+    title: Faker::Name.name,
+    content: Faker::Internet.email
+    )
+end
